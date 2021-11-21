@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
-import waitress
+from waitress import serve
+import warnings
 
 def process_features(feature_list):
     """
@@ -30,6 +31,7 @@ def process_features(feature_list):
 
 app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
+warnings.filterwarnings("ignore")
 
 @app.route("/")
 def home():
@@ -50,4 +52,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug = True, host = "0.0.0.0")
+    #app.run(debug = True, host = "0.0.0.0")
+    serve(app, host = "0.0.0.0", port = 5050, threads = 2)
