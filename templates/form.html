@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>SIMPLE LOAN CALCULATOR</title>
+        <h1>SIMPLE LOAN CALCULATOR</h1>
+    </head>
+
+    <form action = "/predict" method = "post">
+        <label for = "dependents">Number of Dependents: </label>
+        <input type = "text" id = "dependents" name = "dependents"><br>
+        <br>
+
+        <label for = "applicant_income">Applicant Income: </label>
+        <input type = "text" id = "applicant_income" name = "applicant_income"><br>
+        <br>
+
+        <label for = "coapplicant_income">Co-Applicant Income: </label>
+        <input type = "text" id = "coapplicant_income" name = "coapplicant_income"><br>
+        <br>
+
+        <label for = "loan_amt">Loan Amount: </label>
+        <input type = "text" id = "loan_amt" name = "loan_amt"><br>
+        <br>
+
+        <label for = "loan_amt_term">Loan Amount Term: </label>
+        <input type = "text" id = "loan_amt_term" name = "loan_amt_term"><br>
+        <br>
+
+        <label for = "gender">Gender: </label><br>
+        <input type = "radio" id = "gender" name = "gender" value = "male">Male<br>
+        <input type = "radio" id = "gender" name = "gender" value = "female">Female<br>
+        <br>
+
+        <label for = "married">Married: </label><br>
+        <input type = "radio" id = "married" name = "married" value = "yes">Yes<br>
+        <input type = "radio" id = "married" name = "married" value = "no">No<br>
+        <br>
+
+        <label for = "education">Education: </label><br>
+        <input type = "radio" id = "education" name = "education" value = "graduate">Graduate<br>
+        <input type = "radio" id = "education" name = "education" value = "not_graduate">Not Graduate<br>
+        <br>
+
+        <label for = "self_employed">Self Employed: </label><br>
+        <input type = "radio" id = "self_employed" name = "self_employed" value = "yes">Yes<br>
+        <input type = "radio" id = "self_employed" name = "self_employed" value = "no">No<br>
+        <br>
+
+        <label for = "credit_history">Credit History: </label><br>
+        <input type = "radio" id = "credit_history" name = "credit_history" value = "yes">Yes<br>
+        <input type = "radio" id = "credit_history" name = "credit_history" value = "no">No<br>
+        <br>
+
+        <label for = "property">Property: </label><br>
+        <input type = "radio" id = "property" name = "property" value = "urban">Urban<br>
+        <input type = "radio" id = "property" name = "property" value = "semi_urban">Semi-Urban<br>   
+        <input type = "radio" id = "property" name = "property" value = "rural">Rural<br>
+        <br>
+
+        <br>
+        <button>Get Loan Status</button>
+        
+        <br>
+        <br>
+        {{loan_status}}
+    </form>
+
+</html>
