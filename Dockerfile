@@ -9,4 +9,6 @@ RUN apt-get update
 RUN apt-get install -y wget python3.8 python3-pip 
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["app.py"]
+CMD ["./app.py"]
+ENTRYPOINT ["python3"]
+
