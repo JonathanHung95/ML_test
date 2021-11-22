@@ -10,7 +10,7 @@ We use a loan dataset found here, https://www.kaggle.com/burak3ergun/loan-data-s
 
 We use Flask to build a simple web UI where feature details can be input and where they will be processed into a format necessary for the model to make predictions with.  Below is an example of the calculator in action:
 
-![Loan Calculator](assets/calculator.png)
+![Loan Calculator](assets/calculator.PNG)
 
 Waitress serves as our WSGI server.  Details can be found under the app.py file.
 
